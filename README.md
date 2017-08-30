@@ -6,7 +6,7 @@ Introduction
 This is a simple web page used for accepting bitcoin and altcoin payments.
 While it is used for demonstration purposes of how cryptocurrencies can
 be used to accept payment with several free WEBAPIs; it is used live at
-http://khybertandoori.com for customers eating in.
+https://khybertandoori.com for customers eating in.
 
 ATTENTION! BEFORE TAKING PAYMENT!
 ===========================================================
