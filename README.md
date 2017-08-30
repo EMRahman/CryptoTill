@@ -1,6 +1,8 @@
 # CryptoTill
 Accept cryptocurrencies like cash
 
+![AcceptCryptos](https://github.com/EMRahman/CryptoTill/blob/master/Images/AcceptCryptos.jpeg)
+
 Introduction
 ============
 This is a simple web page used for accepting bitcoin and altcoin payments.
