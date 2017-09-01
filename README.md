@@ -1,6 +1,6 @@
 # CryptoTill
 Accept cryptocurrencies just like cash.
-Try the [live demo](http://ehsanrahman.com/cryptotill/CryptoTill.html) (feel free to donate using it too!).
+Try the [live demo](http://ehsanrahman.com/cryptotill/CryptoTill.html) (donations accepted using it!).
 
 ![AcceptCryptos](https://github.com/EMRahman/CryptoTill/blob/master/Images/AcceptCryptos.jpeg)
 
