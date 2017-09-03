@@ -9,6 +9,11 @@ Before using; please read the README at https://github.com/EMRahman/CryptoTill
 -->
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" src="qrcode.js"> </script>
+<script type="text/javascript" src="html5-qrcode.js"> </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
@@ -17,7 +22,7 @@ Before using; please read the README at https://github.com/EMRahman/CryptoTill
 
 <script>
 
-//Default Addressess. PLEASE UPDATE THESE BEFORE ACCEPTING PAYMENT !
+//Default ddresses. PLEASE UPDATE THESE BEFORE ACCEPTING PAYMENT !
 btcAddress="1FfooeYrxDMZYcgehHuYNKgXxP74syuHmM";
 ltcAddress="LPRsy6ZcMep3zsMdJJk9vXo7ncsexSgSot";
 dashAddress="XpNHngiUuhrLAEVtCtJr1fkuk4x63HiS14";
@@ -45,9 +50,6 @@ $(document).ready(function(){
     updateGreen='#0ECA36';
     updateRed='#FB3B1C';
     paymentStatusColour='#FAEB4C';
-
-    //Google QR code API
-    qrImageLinkPrefix="https://chart.googleapis.com/chart?chs=300x300&chld=L|2&cht=qr&chl="; 
  
     //Invoice Amount 
     invoiceAmount=0;
@@ -112,7 +114,7 @@ $(document).ready(function(){
             return;
         }
 	$('#checkTxnStatus').effect("highlight",{color: selectedOrange}, 500);
-	pollBlockChainForUnconfirmedTxn(selectedCcy,selectedAddress);
+	pollBlockChainForConfirmations(selectedCcy,selectedAddress);
     });
 
     $("[checkPayment]").click(function(){
@@ -138,7 +140,7 @@ $(document).ready(function(){
                     } 
 
             //Show payments for selected addresses
-            pollBlockChainForUnconfirmedTxn(ccy_short_name,ccy_address);
+            pollBlockChainForConfirmations(ccy_short_name,ccy_address);
 	    //Disable the QR code if just checking the blockchain
             $("#QRCodeTable").toggle(false);
     });
@@ -157,7 +159,7 @@ $(document).ready(function(){
 //If an address has been gained for the CCY type; use it instead of requesting another new one
 gained_address = [];
 
-//Sets the QR Code; and sets flags to check if the payment has been received
+//Sets the QR Code
 function updateQRCode(jqueryObject, ccy_qr_name, ccy_name_in_capital, ccy_short_name){
 
 		      var ccy_address="";
@@ -199,10 +201,20 @@ function updateQRCode(jqueryObject, ccy_qr_name, ccy_name_in_capital, ccy_short_
 		      var invoiceInCCY = 0;
                       invoiceInCCY=Number(jqueryObject.text());
                       invoiceInCCY=invoiceInCCY.toFixed(8);
-                      qrImageLink= qrImageLinkPrefix + ccy_qr_name + ":" + ccy_address + "?amount=" + invoiceInCCY;
-                      $("#qr_image").attr("src",qrImageLink);
+		      var qrCodeText = ccy_qr_name + ":" + ccy_address + "?amount=" + invoiceInCCY;
+		      //alert(qrCodeText);
+		      //alert(qrCodeText.length);
+
+		      //var element = document.getElementById("qrcode");
+		      var element = document.getElementById("qr_image");
+			var bodyElement = document.body;
+			if(element.lastChild)
+			  element.replaceChild(showQRCode(qrCodeText), element.lastChild);
+			else
+			  element.appendChild(showQRCode(qrCodeText));
+
+		      //Show image of the Crytpo that's been selected
                       $("#QR_Symbol_Image").attr("src",ccy_qr_name+'.png');
-                      $("#qr_code").text(qrImageLink);
 		      $("#QRCodeTable").effect("highlight",{color: updateGreen}, 1000);
 		      $("#qr_ccy").text(ccy_name_in_capital);
 		      $("#qr_amount").text(invoiceInCCY);
@@ -328,7 +340,7 @@ function getUnconfirmedTxnBalance(selectedCcy, selectedAddress){
       return return_result;
 }
 
-function pollBlockChainForUnconfirmedTxn(selectedCcy,selectedAddress){
+function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 
 	    $.ajax({  type: "GET",
 			  dataType: 'json',
@@ -507,7 +519,7 @@ function pollBlockChainForUnconfirmedTxn(selectedCcy,selectedAddress){
 		   </td>
 		  </tr>
 		</table>
-		<img id="qr_image" src="" alt="Waiting for coin selection ..."/>
+		<div id="qr_image"></div>
 		<br/>
 		<table border=1 width="400" height="50" bgcolor="#3E96E4" style="font-family:arial;font-size:x-large">
 		  <td align="center" id="checkTxnStatus">Check Blockchain For Payment</td>
