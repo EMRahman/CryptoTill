@@ -26,12 +26,6 @@ publicAddresses.js
 
 <script>
 
-//if (/Android|Mobile|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-if (/Android|Mobile|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Opera Mini/i.test(navigator.userAgent)) {
-    // Take the user to the mobile screen
-    location.replace("./CryptoTill-Mobile.html");
-}
-
 selectedCcy="";
 selectedAddress="";
 
@@ -442,7 +436,7 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 
 </head>
 <body bgcolor="#FEFFF3">
-<table border=1 width="100%" height="100%" >
+<table border=0 width="100%" height="100%" >
   <tr align="middle">
   <td align="top" width="40%">
 	<font style="font-size: 44pt">&pound;</font><input type="number" id="OrderTotalAmount" value="" placeholder="0.00" style="font-size: 44pt" min="0" max="99999" >
@@ -499,17 +493,16 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
         </tr>
 	</table>
 	<br/>
-
-	<table border=1 width="400" height="50" bgcolor="#3E96E4" style="font-family:arial;font-size:x-large">
+        <table border=1 width="400" height="50" bgcolor="#3E96E4" style="font-family:arial;font-size:x-large">
         <td id="getFiatPrices" align="center">Refresh Exchange Rates</td>
         </table>
-        <br/>
-	APIs: <a href="https://coinmarketcap.com" target="_blank" >CoinMarketCap<a> | <a href="http://blockcypher.com" target="_BLANK">BlockCypher</a> 
 	<br/>
-	&copy; Copyright <a href="http://ehsanrahman.com" target="_BLANK">Ehsan Rahman</a>
-        <br/>
+
+
    </td>
-   <td valign="middle">
+   </tr>
+   <tr>
+   <td valign="middle" align="center">
 	    <table id="QRCodeTable">
 		<tr><td align="center">
 		<table>
@@ -552,6 +545,15 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 	</tr>
 	</table>
    </td>
+  </tr>
+  <tr>
+     <td align="center">
+	<br/>
+        APIs: <a href="https://coinmarketcap.com" target="_blank" >CoinMarketCap<a> | <a href="http://blockcypher.com" target="_BLANK">BlockCypher</a>
+        <br/>
+        &copy; Copyright <a href="http://ehsanrahman.com" target="_BLANK">Ehsan Rahman</a>
+        <br/>
+     </td>
   </tr>
 </table>
 

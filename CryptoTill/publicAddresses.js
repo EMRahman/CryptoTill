@@ -1,0 +1,4 @@
+btcAddress="1FfooeYrxDMZYcgehHuYNKgXxP74syuHmM";
+ltcAddress="LPRsy6ZcMep3zsMdJJk9vXo7ncsexSgSot";
+dashAddress="XpNHngiUuhrLAEVtCtJr1fkuk4x63HiS14";
+ethAddress="0xcb435a4b912f67d25f6fb12054fa4e39202c68d6";
