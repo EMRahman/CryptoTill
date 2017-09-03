@@ -33,4 +33,4 @@ The payment should appear within 1 second in the "Unconfirmed" list. Depending o
 
 If a customer is sending money to an already known address; the buttons "View Payments" can be used to see such recent payments. No more of a customer having to divulge long credit/debit card numbers and 3 digit pins over the phone begrudgingly!
 
-To convert the crypto to a fiat currency bank account, one option is to transfer the amount via a reputable exchange such as [coinbase](https://support.coinbase.com/customer/portal/articles/1963534-payment-methods-for-uk-customers).
+To convert the crypto to a fiat currency bank account, one option is to transfer via a reputable exchange such as [coinbase](https://support.coinbase.com/customer/portal/articles/1963534-payment-methods-for-uk-customers).
