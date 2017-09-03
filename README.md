@@ -6,20 +6,20 @@ Try the [live demo](http://khybertandoori.com/cryptotill/CryptoTill.html); donat
 
 Introduction
 ============
-This is a simple web page used for accepting Bitcoin and Altcoin payments (Dash, Ethereum & Litecoin) . It is used live at
+This is a simple web page used for accepting Bitcoin and Altcoin payments (Dash, Ethereum & Litecoin). It is used live at
 [khybertandoori.com](https://khybertandoori.com) for customers dining in.
 
-Before taking payment
+Before Taking Payment
 ===========================================================
 Please update file named publicAddresses.js before taking payments. i.e. set the addresses to the public addresses that you own and know the private key to. In this basic version; we are reusing the same public keys provided for all transactions (as opposed to a new public key for each transaction).
 
 General Usage (In Brief)
 =========================
-1. Enter the amount to charge a customer
-2. Select the coin amount of the preferred cryptocurrency
-3. Ask the customer to scan the QR code using a wallet, such as (e.g. [jaxx.io](http://jaxx.io))
-4. Ask the customer to confirm details: coin type, amount, address.
-5. Once the customer has sent the amount; check the blockchain for unconfirmed amount
+1. Enter the amount to charge a customer.
+2. Select the coin amount of the preferred cryptocurrency.
+3. Ask the customer to scan the QR code using a wallet, such as (e.g. [jaxx.io](http://jaxx.io)).
+4. Ask the customer to confirm details: coin type, amount, address & send the required amount.
+5. Once the customer has sent the amount; check the blockchain for unconfirmed amount.
 
 General Usage (In Detail)
 =========================
