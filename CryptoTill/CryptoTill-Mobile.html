@@ -9,7 +9,6 @@ Attention! Before using; please read the README at https://github.com/EMRahman/C
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
 <script type="text/javascript" src="qrcode.js"> </script>
 <script type="text/javascript" src="html5-qrcode.js"> </script>
 <!--
@@ -436,15 +435,17 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 
 </head>
 <body bgcolor="#FEFFF3">
-<table border=0 width="100%" height="100%" >
-  <tr align="middle">
-  <td align="top" width="40%">
+
+<table border=0 width="100%">
+<tr>
+<td align="center">
+
 	<font style="font-size: 44pt">&pound;</font><input type="number" id="OrderTotalAmount" value="" placeholder="0.00" style="font-size: 44pt" min="0" max="99999" >
 	<br/>
 	<table border=0 style="font-family:arial;font-size:x-large">
 	<br/>
 
-	<table border=1 bordercolor='#000000' style="font-family:arial;font-size:x-large">
+	<table border=1 bordercolor='#000000' style="font-family:arial;font-size:x-large" width="100%">
 	<tr><th>Coin</th><th>&pound; Sterling</th><th>Coin Amount</th><th>Fee</th><th>Blockchain</th></tr>
 	<tr>
            <td align="center"> 
@@ -498,11 +499,6 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
         </table>
 	<br/>
 
-
-   </td>
-   </tr>
-   <tr>
-   <td valign="middle" align="center">
 	    <table id="QRCodeTable">
 		<tr><td align="center">
 		<table>
@@ -544,9 +540,9 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 	</td>
 	</tr>
 	</table>
-   </td>
-  </tr>
-  <tr>
+<br/>
+<table>
+  <tr height="20px">
      <td align="center">
 	<br/>
         APIs: <a href="https://coinmarketcap.com" target="_blank" >CoinMarketCap<a> | <a href="http://blockcypher.com" target="_BLANK">BlockCypher</a>
@@ -555,6 +551,10 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
         <br/>
      </td>
   </tr>
+</table>
+
+</td>
+</tr>
 </table>
 
 </body>
