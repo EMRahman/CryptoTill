@@ -32,3 +32,5 @@ Once the customer has scanned the QR code using their wallet app (e.g. [jaxx.io]
 The payment should appear within 1 second in the "Unconfirmed" list. Depending on the [confirmation time](https://bitinfocharts.com/comparison/confirmationtime-btc-eth-ltc-dash.html#1y) (Bitcoin 10 min, Ethereum 15 seconds, Dash/Litecoin 2-2.5 minutes at the time of writing); the payment will later appear in the "Confirmed" list once it has entered a block.
 
 If a customer is sending money to an already known address; the buttons "View Payments" can be used to see such recent payments. No more of a customer having to divulge long credit/debit card numbers and 3 digit pins over the phone begrudgingly!
+
+To convert the crypto to a fiat currency bank account, one option is to transfer the amount via a reputable exchange such as [coinbase](https://support.coinbase.com/customer/portal/articles/1963534-payment-methods-for-uk-customers).
