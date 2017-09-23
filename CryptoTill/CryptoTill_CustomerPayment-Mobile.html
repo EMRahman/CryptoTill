@@ -449,15 +449,15 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 
 </head>
 <body bgcolor="#FEFFF3">
-<table border=0 width="100%" height="100%" >
+<table border=0 width="100%" >
   <tr align="middle">
-  <td align="top" width="40%">
+  <td valign="top" width="100%">
 	<font style="font-size: 44pt">&pound;</font><input type="number" id="OrderTotalAmount" value="" placeholder="0.00" style="font-size: 44pt" min="0" max="99999" >
 	<br/>
 	<table border=0 style="font-family:arial;font-size:x-large">
 	<br/>
 
-	<table border=1 bordercolor='#000000' style="font-family:arial;font-size:x-large">
+	<table border=1 bordercolor='#000000' style="font-family:arial;font-size:xx-large" width="80%">
 	<tr><th>Coin</th><th>Sterling</th><th>Coin Amount</th><th>Fee</th></tr>
 	<tr class="QRUpdateDASH">
            <td align="center"> 
@@ -466,8 +466,8 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
              DASH
            </td>
            <td align="center" id="dashPriceCC" class="CCYPrice"></td>
-           <td id="invoiceInDASH_CC" ></td>
-           <td class="fee" feeSetting="0.0002">&pound;0.02</td>
+           <td align="center" id="invoiceInDASH_CC" ></td>
+           <td align="center" class="fee" feeSetting="0.0002">&pound;0.02</td>
         </tr>
 	<tr class="QRUpdateETH">
            <td align="center"> 
@@ -477,8 +477,8 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
            </td>
            <td align="center" id="ethPriceCC" class="CCYPrice">
            </td>
-          <td id="invoiceInETH_CC"></td>
-          <td class="fee" feeSetting="0.000441">&pound;0.07</td>
+          <td align="center" id="invoiceInETH_CC"></td>
+          <td align="center" class="fee" feeSetting="0.000441">&pound;0.07</td>
         </tr>
 	<tr class="QRUpdateLTC">
            <td align="center"> 
@@ -487,8 +487,8 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
              LITECOIN
            </td>
           <td align="center" id="ltcPriceCC" class="CCYPrice"></td>
-          <td id="invoiceInLTC_CC"></td>
-          <td class="fee" feeSetting="0.00453992">&pound;0.15</td>
+          <td align="center" id="invoiceInLTC_CC"></td>
+          <td align="center" class="fee" feeSetting="0.00453992">&pound;0.15</td>
         </tr>
 	<tr class="QRUpdateBTC">
            <td align="center"> 
@@ -497,67 +497,67 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
              BITCOIN
            </td>
          <td align="center" id="btcPriceCC" ></td>
-         <td id="invoiceInBTC_CC"></td>
-         <td class="fee" feeSetting="0.000452">&pound;1.50</td>
+         <td align="center" id="invoiceInBTC_CC"></td>
+         <td align="center" class="fee" feeSetting="0.000452">&pound;1.50</td>
         </tr>
 	</table>
 	<br/>
-	<table border=1 width="400" height="50" bgcolor="#3E96E4" style="font-family:arial;font-size:x-large">
+	<table border=1 width="400" height="50" bgcolor="#3E96E4" style="font-family:arial;font-size:xx-large">
         <td id="getFiatPrices" align="center">Refresh Exchange Rates</td>
         </table>
    </td>
 <tr>
 </tr>
-   <td valign="middle" align="center">
-	    <table id="QRCodeTable">
+   <td valign="top" align="center">
+	<br/>
+	    <table border=0 id="QRCodeTable" style="font-family:arial;font-size:xx-large">
 		<tr><td align="center">
-		<table>
+		<table style="font-family:arial;font-size:xx-large">
 		  <tr>
 		   <td>
-		     <br/>
 		      <img id="QR_Symbol_Image" height="100" width="100" src=""/>
 		   </td>
 		   <td align="center">
-		     <b style="font-family:arial;font-size:x-large" id="qr_amount"></b> 
-		     <b style="font-family:arial;font-size:x-large" id="qr_ccy"></b>
+		     <b style="font-family:arial;font-size:xx-large" id="qr_amount"></b> 
+		     <b style="font-family:arial;font-size:xx-large" id="qr_ccy"></b>
 		      <br/>
-		      Address: <i id="qr_address"></i>
+		      Send to address: <br/><i id="qr_address"></i>
 		   </td>
 		  </tr>
 		</table>
 		<div id="qr_image"></div>
 		<br/>
-		<table border=1 width="400" height="50" bgcolor="#3E96E4" style="font-family:arial;font-size:x-large">
+		<table border=1 width="600" height="50" bgcolor="#3E96E4" style="font-family:arial;font-size:xx-large">
 		  <td align="center" id="checkTxnStatus">Check Blockchain For Payment</td>
 		</table>
-		</td></tr>
+		</td> 
+               </tr>
 	     </table>
-        <table id="blockchainCheck">
+        <table id="blockchainCheck" style="font-family:arial;font-size:xx-large">
 	<tr>
-	<td align="center">
-	        <br/>
-	        <br/>
-		Address: <i id=address></i>
+	    <td align="center" valign="top">
+	        <!--<br/>
+		Address: <i id=address></i>-->
 		<br/>
+		<u>Unconfirmed</u>
 		<br/>
-		<u style="font-family:arial;font-size:x-large">Unconfirmed</u>
+		<table id=unconfirmed_txns border=1 bordercolor='#000000' style="font-family:arial;font-size:xx-large"> </table>
 		<br/>
-		<table id=unconfirmed_txns border=1 bordercolor='#000000'>
-		</table>
+		<u>Confirmed</u>
 		<br/>
-		<u style="font-family:arial;font-size:x-large">Confirmed</u>
-		<br/>
-		<table id=txns border=1 bordercolor='#000000'>
-		</table>
-	</td>
+		<table id=txns border=1 bordercolor='#000000' style="font-family:arial;font-size:xx-large"> </table>
+	    </td>
 	</tr>
 	</table>
-
-	<br/>
-        APIs: <a href="https://coinmarketcap.com" target="_blank" >CoinMarketCap<a> | <a href="http://blockcypher.com" target="_BLANK">BlockCypher</a>
-        <br/>
-        &copy; Copyright <a href="http://ehsanrahman.com" target="_BLANK">Ehsan Rahman</a>
-        <br/>
+	<table style="font-family:arial;font-size:xx-large" align="center">
+		<tr><td align="center">
+		<br/>
+		APIs: <a href="https://coinmarketcap.com" target="_blank" >CoinMarketCap<a> | <a href="http://blockcypher.com" target="_BLANK">BlockCypher</a>
+		<br/>
+		&copy; Copyright <a href="http://ehsanrahman.com" target="_BLANK">Ehsan Rahman</a>
+		<br/>
+		</td></tr>
+	</table>
    </td>
   </tr>
 </table>
