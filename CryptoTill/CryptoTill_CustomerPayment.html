@@ -380,7 +380,7 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 			      $("#unconfirmed_n_tx").text(result.unconfirmed_n_tx);
 			      $("#final_n_tx").text(result.final_n_tx);
 				var txnrefs = result.txrefs;
-				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>Amount in GBP</th><th>Side</th><th>Confirmed Time</th><th>Confirmations</th></tr>";
+				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>GBP</th><th>Side</th><th>Confirmed Time</th><th>Confirmations</th></tr>";
 				$.each( txnrefs , function( key, value ) {
                                 txntable += "<tr>";
 			        if(selectedCcy==="eth"){
@@ -412,7 +412,7 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 				$("#txns").html(txntable);
 			       $("#unconfirmed_txrefs").text(result.unconfirmed_txrefs);
 				var txnrefs = result.unconfirmed_txrefs;
-				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>Sterling</th><th>Side</th><th>Received Time</th><th>Confirmations</th></tr>";
+				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>GBP</th><th>Side</th><th>Received Time</th><th>Confirmations</th></tr>";
 				$.each( txnrefs , function( key, value ) {
 					txntable += "<tr>";
 				       if(selectedCcy==="eth"){
@@ -545,8 +545,8 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 	<tr>
 	<td align="center">
 	        <br/>
-		Address: <i id=address></i>
-		<br/>
+		<!--Address: <i id=address></i>
+		<br/>-->
 		<br/>
 		<u style="font-family:arial;font-size:x-large">Unconfirmed</u>
 		<br/>
@@ -567,3 +567,4 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 </body>
 
 </html>
+
