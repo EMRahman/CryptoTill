@@ -113,6 +113,11 @@ $(document).ready(function(){
         }
 	$('#checkTxnStatus').effect("highlight",{color: selectedOrange}, 500);
 	pollBlockChainForConfirmations(selectedCcy,selectedAddress);
+
+      //Scroll down to blockchain check
+	$('html,body').animate({
+		scrollTop: $("#blockchainCheck").offset().top},
+	'slow');
     });
 
     $("[checkPayment]").click(function(){
