@@ -6,7 +6,7 @@ CryptoTill.html Copyright (c) 2017 Ehsan Rahman
 Attention! Before using; please read the README at https://github.com/EMRahman/CryptoTill
 
 -->
-
+<title>Khyber Digital Payments</title>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -226,6 +226,11 @@ function updateQRCode(jqueryObject, ccy_qr_name, ccy_name_in_capital, ccy_short_
 		      selectedAddress = ccy_address;
 		      //Clear the blockchain payments
 		      $("#blockchainCheck").toggle(false);
+
+		      //Scroll down to QR code
+			$('html,body').animate({
+				scrollTop: $("#QRCodeTable").offset().top},
+			'slow');
 }
 
 //Gets GBP prices. Also converts total amount to CCY prices.
@@ -374,7 +379,7 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 			      $("#unconfirmed_n_tx").text(result.unconfirmed_n_tx);
 			      $("#final_n_tx").text(result.final_n_tx);
 				var txnrefs = result.txrefs;
-				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>Amount in GBP</th><th>Side</th><th>Confirmed Time</th><th>Confirmations</th></tr>";
+				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>GBP</th><th>Side</th><th>Confirmed Time</th><th>Confirmations</th></tr>";
 				$.each( txnrefs , function( key, value ) {
                                 txntable += "<tr>";
 			        if(selectedCcy==="eth"){
@@ -406,7 +411,7 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 				$("#txns").html(txntable);
 			       $("#unconfirmed_txrefs").text(result.unconfirmed_txrefs);
 				var txnrefs = result.unconfirmed_txrefs;
-				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>Sterling</th><th>Side</th><th>Received Time</th><th>Confirmations</th></tr>";
+				var txntable = "<tr><th>Value ("+ selectedCcy +")</th><th>GBP</th><th>Side</th><th>Received Time</th><th>Confirmations</th></tr>";
 				$.each( txnrefs , function( key, value ) {
 					txntable += "<tr>";
 				       if(selectedCcy==="eth"){
@@ -449,6 +454,7 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 
 </head>
 <body bgcolor="#FEFFF3">
+<a href="https://github.com/EMRahman"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 <table border=0 width="100%" >
   <tr align="middle">
   <td valign="top" width="100%">
@@ -565,3 +571,4 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 </body>
 
 </html>
+
