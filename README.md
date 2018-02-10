@@ -13,7 +13,7 @@ Before Taking Payment
 ===========================================================
 Update file named publicAddresses.js before taking payments. i.e. set the addresses to the public addresses that you own and know the private key to. In this basic version; we are reusing the same public keys provided for all transactions (as opposed to a new public key for each transaction). This should give customers confidence others are using cryptocurrency as payment.
 
-General Usage (Brief)
+General Usage (TL;DR/ In Brief)
 =========================
 1. Enter the amount to charge a customer.
 2. Select the coin amount of the preferred cryptocurrency.
@@ -21,7 +21,7 @@ General Usage (Brief)
 4. Ask the customer to confirm details: coin type, amount, address & send the required amount.
 5. Once the customer has sent the amount; check the blockchain for unconfirmed amount.
 
-General Usage (Detail)
+General Usage (In Detail)
 =========================
 After entering an amount to charge a customer; the various cryptocurrency amounts are determined using a live FX rate (via [CoinMarketCap.com](http://CoinMarketCap.com)). The FX rate and [estimated transaction fee](https://bitinfocharts.com/comparison/transactionfees-btc-eth-ltc-dash-doge.html#1y) is displayed. Fee's are based on [jaxx.io](http://jaxx.io)'s static rates.
 
