@@ -2,7 +2,7 @@
 
 <!-- README 
 
-CryptoTill.html Copyright (c) 2017 Ehsan Rahman
+CryptoTill.html Copyright (c) 2018 Ehsan Rahman
 Attention! Before using; please read the README at https://github.com/EMRahman/CryptoTill
 
 -->
@@ -418,7 +418,7 @@ function updateCryptoPrices(){
     $("#invoiceInBTC_CC").effect("highlight",{color: updateGreen}, 500);
     $("#invoiceInBCH_CC").text(Number(inputtedAmount / bchPriceCCInGBP).toFixed(8) );
     $("#invoiceInBCH_CC").effect("highlight",{color: updateGreen}, 500);
-    $("#invoiceInDOGE_CC").text(Number(inputtedAmount / dogePriceCCInGBP).toFixed(8) );
+    $("#invoiceInDOGE_CC").text(addCommas(Number(inputtedAmount / dogePriceCCInGBP).toFixed(2)) );
     $("#invoiceInDOGE_CC").effect("highlight",{color: updateGreen}, 500);
 
 }	
@@ -538,7 +538,7 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 
 </head>
 <body bgcolor="#fff">
-<a href="https://github.com/EMRahman"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+<a href="https://github.com/EMRahman/CryptoTill"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 <table border=0 width="100%" >
   <tr align="middle">
   <td valign="top" width="100%">
@@ -652,4 +652,3 @@ function pollBlockChainForConfirmations(selectedCcy,selectedAddress){
 </body>
 
 </html>
-
