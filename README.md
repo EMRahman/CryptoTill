@@ -29,7 +29,7 @@ You must then select the desired amount of the crypto the customer wishes to pay
 
 Once the customer has scanned the QR code using their wallet app (e.g. [jaxx.io](http://jaxx.io)), we can check for payments using the "Check Blockchain For Payment" button, this is provided by [blockcypher.com](http://blockcypher.com) and by default they have a 200 requests per hour limit at the time of writing. 
 
-The payment should appear within 1 second in the "Unconfirmed" list. Depending on the [confirmation time](https://bitinfocharts.com/comparison/confirmationtime-btc-eth-ltc-dash-doge.html#1y) (Bitcoin 10 min, Ethereum 15 seconds, Dash/Litecoin 2-2.5 minutes at the time of writing); the payment will later appear in the "Confirmed" list once it has entered a block.
+The payment should appear within 1 second in the "Unconfirmed" list. Depending on the [confirmation time](https://bitinfocharts.com/comparison/confirmationtime-btc-eth-ltc-dash-doge.html#1y) (Bitcoin 10 min, Ethereum 15 seconds, Dash/Litecoin 2-2.5 minutes, Dogecoin 1 minute at the time of writing); the payment will later appear in the "Confirmed" list once it has entered a block.
 
 If a customer is sending money to an already known address; the buttons "View Payments" can be used to see such recent payments. No more of a customer having to divulge long credit/debit card numbers and 3 digit pins over the phone begrudgingly!
 
